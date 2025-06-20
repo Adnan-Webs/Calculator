@@ -1,0 +1,21 @@
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 200px;
+  margin: auto;
+  gap: 10px;
+}
+
+.calc input {
+  grid-column: span 4;
+  text-align: right;
+  padding: 10px;
+}
+
+.calc button {
+  padding: 10px;
+  font-size: 16px;
+}
+#equal {
+  grid-column: span 2;
+}
