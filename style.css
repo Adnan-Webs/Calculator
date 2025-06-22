@@ -1,21 +1,122 @@
+body {
+  background-color: rgb(255, 255, 255);
+  background-image: ;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .calc {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 200px;
-  margin: auto;
-  gap: 10px;
+  max-width: 300px;
+  gap: 12px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .calc input {
   grid-column: span 4;
   text-align: right;
-  padding: 10px;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  background-color: #111;
+  color: white;
 }
 
 .calc button {
-  padding: 10px;
-  font-size: 16px;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  border: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
+
+.calc button:hover {
+  background-color: #666;
+}
+
 #equal {
   grid-column: span 2;
+  border-radius: 25px;
+  background-color: #00b894;
+  color: white;
+}
+
+#equal:hover {
+  background-color: #00a07c;
+}
+
+#ThemeMode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#ThemeMode button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.2s;
+}
+
+#ThemeMode button:hover {
+  background-color: #555;
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.light-mode .calc {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .calc input {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+body.light-mode .calc button {
+  background-color: #ddd;
+  color: black;
+}
+
+body.light-mode .calc button:hover {
+  background-color: #ccc;
+}
+
+body.light-mode #equal {
+  background-color: #0984e3;
+  color: white;
+}
+
+body.light-mode #equal:hover {
+  background-color: #086dc1;
+}
+
+body.light-mode #ThemeMode button {
+  background-color: #eee;
+  color: black;
+}
+
+body.light-mode #ThemeMode button:hover {
+  background-color: #ccc;
 }
