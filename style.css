@@ -1,6 +1,5 @@
 body {
   background-color: rgb(255, 255, 255);
-  background-image: ;
   height: 100vh;
   margin: 0;
   display: flex;
@@ -14,7 +13,7 @@ body {
   max-width: 300px;
   gap: 12px;
   padding: 20px;
-  background-color: #222;
+  background-color: #3b3737;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   position: relative;
@@ -49,12 +48,12 @@ body {
 #equal {
   grid-column: span 2;
   border-radius: 25px;
-  background-color: #00b894;
+  background-color: #85ffe5;
   color: white;
 }
 
 #equal:hover {
-  background-color: #00a07c;
+  background-color: #d6c8db;
 }
 
 #ThemeMode {
@@ -79,44 +78,44 @@ body {
   background-color: #555;
 }
 
-body.light-mode {
-  background-color: white;
+body:not(.dark-mode) {
+  background-color: rgb(175, 226, 236);
   color: black;
 }
 
-body.light-mode .calc {
-  background-color: white;
+body:not(.dark-mode) .calc {
+  background-color: rgb(204, 202, 202);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-body.light-mode .calc input {
+body:not(.dark-mode) .calc input {
   background-color: #f0f0f0;
   color: black;
 }
 
-body.light-mode .calc button {
+body:not(.dark-mode) .calc button {
   background-color: #ddd;
   color: black;
 }
 
-body.light-mode .calc button:hover {
+body:not(.dark-mode) .calc button:hover {
   background-color: #ccc;
 }
 
-body.light-mode #equal {
-  background-color: #0984e3;
+body:not(.dark-mode) #equal {
+  background-color: #a692b0;
   color: white;
 }
 
-body.light-mode #equal:hover {
-  background-color: #086dc1;
+body:not(.dark-mode) #equal:hover {
+  background-color: #d199dd;
 }
 
-body.light-mode #ThemeMode button {
+body:not(.dark-mode) #ThemeMode button {
   background-color: #eee;
   color: black;
 }
 
-body.light-mode #ThemeMode button:hover {
+body:not(.dark-mode) #ThemeMode button:hover {
   background-color: #ccc;
 }

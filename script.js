@@ -8,10 +8,7 @@ function clearDisplay() {
 
 function calculate() {
   try {
-    var result = document.getElementById("display").value;
-
-    result = eval(result);
-
+    const result = eval(document.getElementById("display").value);
     document.getElementById("display").value = result;
   } catch (e) {
     document.getElementById("display").value = "error";
@@ -19,24 +16,29 @@ function calculate() {
 }
 
 function backspace() {
-  var display = document.getElementById("display").value;
-  document.getElementById("display").value = display.slice(0, -1);
+  const display = document.getElementById("display");
+  display.value = display.value.slice(0, -1);
 }
 
-function lightMode() {
+function toggleTheme() {
   const body = document.body;
+  const button = document.getElementById("themeToggle");
   const bgColor = window.getComputedStyle(body).backgroundColor;
-  if (bgColor === "rgb(255, 255, 255)") {
-    return;
-  }
-  body.style.backgroundColor = "white";
-}
 
-function darkMode() {
-  const body = document.body;
-  const bgColor = window.getComputedStyle(body).backgroundColor;
-  if (bgColor === "rgb(0, 0, 0)") {
-    return;
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    button.textContent = "☀️";
+  } else {
+    button.textContent = "🌙";
   }
-  body.style.backgroundColor = "black";
+
+  if(body.classList.contains("dark-mode")){
+    body.style.backgroundColor = "rgb(41, 45, 46)";
+  } else {
+    body.style.backgroundColor = "rgb(175, 226, 236)";
+  }
+
+  
+
 }
