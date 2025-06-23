@@ -24,10 +24,11 @@ body {
   text-align: right;
   padding: 15px;
   font-size: 24px;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
-  background-color: #111;
+  background-color: #000000;
   color: white;
+  box-shadow: 0 0 15px #d659d4, 0 0 15px #d199dd inset ;
 }
 
 .calc button {
@@ -42,7 +43,8 @@ body {
 }
 
 .calc button:hover {
-  background-color: #666;
+  background-color: #e395ee;
+  box-shadow: 0 0 15px #d659d4,0 0 15px #d199dd inset;
 }
 
 #equal {
